@@ -48,7 +48,8 @@ for i=1:length(test_values)
     end
 end
 
-surf(test_values, test_values, PRED_MATRIX);
+
+generateScatter(test_values,test_values,PRED_MATRIX)
 
 
 

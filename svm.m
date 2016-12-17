@@ -43,14 +43,20 @@ p = svmPredict(model, Xtest);
 % caculating PRECISION and RECALL
 [precision, recall] = calculatePrecisionAndRecall(TP, FN, FP, FN);
 
-precision, recall
-
 % caculating F1 Score
 F1 = calculateF1Score(precision, recall);
 
-F1
+fprintf('TP: %d\nTN: %d\n FP: %d\n FN: %d\n', TP, TN, FP, FN);
+fprintf('\nPrecision = %.3f', precision);
+fprintf('\nRecall = %.3f', recall);
+fprintf('\nF1 Score = %.3f', F1);
 
-fprintf('Test Accuracy: %f\n', mean(double(p == ytest)) * 100);
+
+
+
+% fprintf(' : %f\n', mean(double(p == ytest)) * 100);
+
+% fprintf('Test Accuracy: %f\n', mean(double(p == ytest)) * 100);
 
 
 
